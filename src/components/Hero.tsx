@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, ChevronDown } from 'lucide-react';
 export function Hero() {
   const [particles, setParticles] = useState<
     Array<{
@@ -10,7 +10,7 @@ export function Hero() {
       duration: string;
       delay: string;
     }>>(
-    []);
+      []);
   useEffect(() => {
     // Generate random particles
     const newParticles = Array.from({
@@ -29,16 +29,16 @@ export function Hero() {
       {/* Particle Background */}
       <div className="absolute inset-0 overflow-hidden">
         {particles.map((p) =>
-        <div
-          key={p.id}
-          className="particle"
-          style={{
-            left: p.left,
-            width: p.size,
-            height: p.size,
-            animationDuration: p.duration,
-            animationDelay: p.delay
-          }} />
+          <div
+            key={p.id}
+            className="particle"
+            style={{
+              left: p.left,
+              width: p.size,
+              height: p.size,
+              animationDuration: p.duration,
+              animationDelay: p.delay
+            }} />
 
         )}
       </div>
@@ -154,7 +154,7 @@ export function Hero() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 blur-2xl opacity-30 animate-pulse"></div>
               <div className="relative w-full h-full rounded-full border-4 border-white/10 overflow-hidden shadow-2xl glow-purple">
                 <img
-                  src="/WhatsApp_Image_2026-02-21_at_7.27.41_AM.jpg"
+                  src={`${import.meta.env.BASE_URL}WhatsApp_Image_2026-02-21_at_7.27.41_AM.jpg`}
                   alt="Shanika Maduwanthi"
                   className="w-full h-full object-cover" />
 
