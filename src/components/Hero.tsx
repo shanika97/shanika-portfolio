@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, ChevronDown, Download } from 'lucide-react';
 export function Hero() {
   const [particles, setParticles] = useState<
     Array<{
@@ -101,6 +101,20 @@ export function Hero() {
                 className="px-8 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full text-white font-medium shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300">
 
                 Hire Me
+              </motion.a>
+
+              <motion.a
+                whileHover={{
+                  scale: 1.05
+                }}
+                whileTap={{
+                  scale: 0.95
+                }}
+                href={`${import.meta.env.BASE_URL}Maduwanthi_Resume.pdf`}
+                download="Shanika_Maduwanthi_CV.pdf"
+                className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white font-medium hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
+                <Download size={20} />
+                Download CV
               </motion.a>
 
               <div className="flex items-center gap-4">
